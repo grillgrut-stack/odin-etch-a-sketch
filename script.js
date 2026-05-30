@@ -1,6 +1,7 @@
 const container = document.querySelector("#container");
 
 
+
 for (let i = 0; i < 16; i++) {
     const newContainer = document.createElement("div");
     container.appendChild(newContainer);
@@ -8,6 +9,10 @@ for (let i = 0; i < 16; i++) {
         const divs = document.createElement("div");
         divs.textContent = "";
         divs.classList.add("square");
+        divs.addEventListener("mouseenter", () => {
+            divs.style.backgroundColor = "blue";
+        });
         newContainer.appendChild(divs);
     }
 }
+
