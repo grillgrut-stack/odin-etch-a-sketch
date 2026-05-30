@@ -2,10 +2,10 @@ const container = document.querySelector("#container");
 
 
 
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < 64; i++) {
     const newContainer = document.createElement("div");
     container.appendChild(newContainer);
-    for (let z = 0; z < 16; z++) {
+    for (let z = 0; z < 64; z++) {
         const divs = document.createElement("div");
         divs.textContent = "";
         divs.classList.add("square");
