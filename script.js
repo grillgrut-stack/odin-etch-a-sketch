@@ -28,9 +28,11 @@ function createGrid (gridSize) {
 
                 divs.style.backgroundColor = `rgb(${randomize(divs.dataset.r)}, ${randomize(divs.dataset.g)}, ${randomize(divs.dataset.b)})`;
 
-                divs.dataset.r *= 0.85;
-                divs.dataset.g *= 0.85;
-                divs.dataset.b *= 0.85;
+                divs.dataset.r *= 0.90 - 0.10;
+                divs.dataset.g *= 0.90 - 0.10;
+                divs.dataset.b *= 0.90 - 0.10;
+
+                console.log(divs.dataset.r);
             });
             newContainer.appendChild(divs);
         }
