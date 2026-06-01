@@ -35,12 +35,12 @@ button.addEventListener("click", () => {
     const wrapper = document.querySelector("#big");
     wrapper.removeChild(container)
 
-    let newGrid = prompt("Please Enter a new grid size # x #");
+    let newGrid = parseInt(prompt("Please Enter a new grid size # x #"));
 
     while (true) {
 
-        if (newGrid > 100) {
-            newGrid = prompt("Pick a number less than or equal to 100!")
+        if (newGrid > 100 || newGrid < 0 || Number.isNaN(newGrid)) {
+            newGrid = prompt("Pick a number greated than 0 or less than 100!")
         } else {
 
             break;
