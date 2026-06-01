@@ -21,12 +21,17 @@ function createGrid (gridSize) {
             divs.style.width = `${squareSize}px`;
             divs.style.height = `${squareSize}px`;
             divs.addEventListener("mouseenter", () => {
-                divs.style.backgroundColor = "blue";
+                divs.style.backgroundColor = `rgb(${randomize()}, ${randomize()}, ${randomize()})`;
             });
             newContainer.appendChild(divs);
         }
     }
 }
+
+function randomize() {
+    return(Math.floor(Math.random() * 255));
+    
+};
 
 const button = document.querySelector("button");
 
@@ -40,7 +45,7 @@ button.addEventListener("click", () => {
     while (true) {
 
         if (newGrid > 100 || newGrid < 0 || Number.isNaN(newGrid)) {
-            newGrid = prompt("Pick a number greated than 0 or less than 100!")
+            newGrid = parseInt(prompt("Pick a number greated than 0 or less than 100!"));
         } else {
 
             break;
@@ -53,6 +58,7 @@ button.addEventListener("click", () => {
 
     createGrid(newGrid);
 });
+
 
 
 createGrid(gridSize);
