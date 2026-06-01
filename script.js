@@ -1,8 +1,12 @@
 container = document.querySelector("#container");
 
+
 let gridSize = 16;
 
 function createGrid (gridSize) {
+
+    let squareSize = (container.offsetWidth / gridSize);
+
     for (let i = 0; i < gridSize; i++) {
 
         const newContainer = document.createElement("div");
@@ -14,6 +18,8 @@ function createGrid (gridSize) {
             const divs = document.createElement("div");
             divs.textContent = "";
             divs.classList.add("square");
+            divs.style.width = `${squareSize}px`;
+            divs.style.height = `${squareSize}px`;
             divs.addEventListener("mouseenter", () => {
                 divs.style.backgroundColor = "blue";
             });
@@ -36,6 +42,7 @@ button.addEventListener("click", () => {
         if (newGrid > 100) {
             newGrid = prompt("Pick a number less than or equal to 100!")
         } else {
+
             break;
         }
     }

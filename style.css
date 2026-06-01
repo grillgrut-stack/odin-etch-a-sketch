@@ -2,12 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width:700px;
+    height: 700px;
+
+
 }
 
 .square {
-    min-width: 10px;
-    min-height: 10px;
     border: solid;
+    box-sizing: border-box;  /* border box to include the width in measuremeants */
+}
+
+/* Display flex on outer to make them rows instead of columns */
+.outer {
+    display: flex;
 }
 
 #big {
