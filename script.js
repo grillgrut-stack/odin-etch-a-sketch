@@ -18,18 +18,27 @@ function createGrid (gridSize) {
             const divs = document.createElement("div");
             divs.textContent = "";
             divs.classList.add("square");
+
             divs.style.width = `${squareSize}px`;
             divs.style.height = `${squareSize}px`;
+            divs.dataset.r = 255;
+            divs.dataset.g = 255;
+            divs.dataset.b = 255;
             divs.addEventListener("mouseenter", () => {
-                divs.style.backgroundColor = `rgb(${randomize()}, ${randomize()}, ${randomize()})`;
+
+                divs.style.backgroundColor = `rgb(${randomize(divs.dataset.r)}, ${randomize(divs.dataset.g)}, ${randomize(divs.dataset.b)})`;
+
+                divs.dataset.r *= 0.85;
+                divs.dataset.g *= 0.85;
+                divs.dataset.b *= 0.85;
             });
             newContainer.appendChild(divs);
         }
     }
 }
 
-function randomize() {
-    return(Math.floor(Math.random() * 255));
+function randomize(brightness) {
+    return(Math.floor(Math.random() * brightness));
 };
 
 const button = document.querySelector("button");
