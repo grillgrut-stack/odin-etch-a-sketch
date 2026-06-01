@@ -2,14 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width:700px;
-    height: 700px;
-
-
+    width:1000px;
 }
 
 .square {
-    border: solid;
+    border: 1px solid;
     box-sizing: border-box;  /* border box to include the width in measuremeants */
 }
 

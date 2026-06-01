@@ -30,7 +30,6 @@ function createGrid (gridSize) {
 
 function randomize() {
     return(Math.floor(Math.random() * 255));
-    
 };
 
 const button = document.querySelector("button");
